@@ -32,3 +32,11 @@ CMD ["python", "app.py"]
 
 ```
 This `Dockerfile` refers to a couple of files we haven't created yet, namely `app.py` and `requirements.txt`. Let's create those next.
+
+## Create python app files
+
+Create two more files, `requirements.txt` and `app.py` in the same folder with the `Dockerfile`.
+
+Now we see that `pip install -r requirements.txt` installs the Flask and Redis libraries for Python, and the app prints the environment vairable `NAME`, as well as the output of a call to `socket.gethostname()` .
+
+Finally, because Redis isn't running (we have not install Redis), we should expect that the attempt to use it here fails and produces the error message.
