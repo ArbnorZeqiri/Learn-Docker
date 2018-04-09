@@ -75,3 +75,19 @@ CONTAINER ID        IMAGE               COMMAND             CREATED
 
 Use `docker container stop CONTAINER_ID` to stop the container.
 For example: `docker container stop 1fa4ab2cf395` .
+
+## Push repository to the cloud
+
+First, you should have an account in `cloud.docker.com`.
+
+Tag your image you want to push: `docker tag image username/repository:tag`.
+
+For example: `docker tag myPythonProject azeqiri/get-started:part1` .
+
+After that, you can publish the image to the repository:
+
+`docker push username/repository:tag` .
+
+You also can run the image from the remote repository:
+
+`docker run -p 4000:80 username/repository:tag` .
